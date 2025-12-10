@@ -8,9 +8,9 @@ import (
 
 func TestResult1(t *testing.T) {
 	tests := []struct {
-		name  string
+		name string
 		file string
-		want  int
+		want int
 	}{
 		{
 			name: "default",
@@ -29,11 +29,11 @@ func TestResult1(t *testing.T) {
 
 			var lines []string
 			scanner := bufio.NewScanner(f)
-			for scanner.Scan(){
+			for scanner.Scan() {
 				lines = append(lines, scanner.Text())
 			}
 
-			if err := scanner.Err(); err != nil{
+			if err := scanner.Err(); err != nil {
 				t.Fatalf("error reading files %v", err)
 			}
 
@@ -47,9 +47,9 @@ func TestResult1(t *testing.T) {
 
 func TestResult2(t *testing.T) {
 	tests := []struct {
-		name  string
+		name string
 		file string
-		want  int
+		want int
 	}{
 		{
 			name: "default",
@@ -68,11 +68,11 @@ func TestResult2(t *testing.T) {
 
 			var lines []string
 			scanner := bufio.NewScanner(f)
-			for scanner.Scan(){
+			for scanner.Scan() {
 				lines = append(lines, scanner.Text())
 			}
 
-			if err := scanner.Err(); err != nil{
+			if err := scanner.Err(); err != nil {
 				t.Fatalf("error reading files %v", err)
 			}
 
